@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private FieldOfficerAdapter mAdapter;
     private SwipeRefreshLayout pullToRefresh;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

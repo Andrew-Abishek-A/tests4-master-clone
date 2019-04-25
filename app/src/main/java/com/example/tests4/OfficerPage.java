@@ -1,5 +1,6 @@
 package com.example.tests4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,6 +32,7 @@ public class OfficerPage extends AppCompatActivity {
     private TextView CoordTextView;
     private String name;
     private String uid;
+    private FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,13 @@ public class OfficerPage extends AppCompatActivity {
         uid = getIntent().getExtras().getString("UID");
 
         FONameTextView.setText(name);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OfficerPage.this, ChatActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Trip trip = null;
 
